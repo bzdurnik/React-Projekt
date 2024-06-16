@@ -1,0 +1,172 @@
+/* Ogólne style kalendarza */
+.react-calendar {
+    width: 100%;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+/* Dostosowanie stylu dla ka¿dego dnia */
+.react-calendar__month-view__days__day {
+    height: 80px;
+    outline: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-right: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+    /* Ukrycie domyœlnego numeru dnia */
+    .react-calendar__month-view__days__day abbr {
+        display: none;
+    }
+
+/* Numer dnia */
+.tile-content .custom-date-number {
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+/* Numery dni weekendów, które nale¿¹ do danego miesi¹ca */
+.react-calendar__month-view__days__day--weekend:not(.react-calendar__month-view__days__day--neighboringMonth) .custom-date-number {
+    color: #ff8080;
+}
+
+/* Numery dni spoza bie¿¹cego miesi¹ca */
+.react-calendar__month-view__days__day--neighboringMonth .custom-date-number {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Dostosowanie stylu dla nazw dni */
+.react-calendar__month-view__weekdays__weekday {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* Nazwy dni */
+    .react-calendar__month-view__weekdays__weekday abbr {
+        text-transform: uppercase;
+        text-decoration: none; /* Usuniêcie podkreœlenia */
+        cursor: default; /* Usuniêcie znaku zapytania przy kursorku */
+    }
+
+    /* Sobota */
+    .react-calendar__month-view__weekdays__weekday:nth-child(6) abbr {
+        color: #ff8080;
+    }
+
+    /* Niedziela */
+    .react-calendar__month-view__weekdays__weekday:nth-child(7) abbr {
+        color: #ff8080;
+    }
+
+/* Dostosowanie stylu dla guzików nawigacji */
+.react-calendar__navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+    .react-calendar__navigation button {
+        min-width: 44px;
+        background: transparent;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.25);
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+        .react-calendar__navigation button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+/* Podœwietlanie podczas najechania na dzieñ */
+.react-calendar__month-view__days__day:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Stylizacja dla komórek z wydarzeniami */
+.tile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.event-title {
+    font-size: 0.8em;
+    text-align: center;
+    background-color: #ea6705; /* Pastelowy czerwony kolor t³a */
+    color: White; /* Bia³y kolor czcionki */
+    border-radius: 3px;
+    padding: 2px 4px;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.has-event .react-calendar__tile span {
+    color: white;
+}
+
+/* ------------- AKORDEON -------------------*/
+
+.dark-accordion {
+    background-color: #000;
+     /* Dark background color */
+    color: white; /* White text color for better readability */
+    padding: 10px; /* Optional padding for spacing */
+    border-radius: 8px; /* Optional border radius for rounded corners */
+   
+}
+
+
+
+.dark-accordion .accordion-body {
+    background-color: #000; /* Dark background color for body */
+    color: white;
+}
+
+
+.accordion .item .accordion-header button{
+    background-color: black; /* Light background color */
+    box-shadow:none;
+
+}
+    .accordion .item .accordion-header button::after {
+        background-color: white; /* Light background color */
+        border-radius: 7px;
+        color: orange;
+        box-shadow: none;
+    }
+
+/*    --------------- Alerty--------------------*/
+.custom-alert {
+    margin-left: 5px;
+    background-color: #c72c2c;
+    color: white;
+    border: 1px solid #561e1e;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    border-radius: 3px;
+    padding: 2px 4px;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
